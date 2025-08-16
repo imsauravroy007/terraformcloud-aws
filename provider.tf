@@ -6,12 +6,27 @@
 # though: using the remote backend, Terraform will execute remotely in HCP Terraform
 # where your token is already securely stored in your workspace!
 
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 6.0.0"
+    }
+  }
+
+  required_version = ">= 1.0.0"
+}
+# The following variable is used to configure the provider's authentication
+
+
 variable "provider_token" {
   type      = string
   sensitive = true
   default = "UDyzD4VuFSYLew.atlasv1.G3W2hZWbSoIUyxHRjtZDvRC8Dn1pvBKKamMZkJG6lKTzSvyOmw4agEM6coCpvkrWJic"
 }
 
-provider "fakewebservices" {
+provider "aws" {
   token = var.provider_token
+  region = "us-west-2"
 }
+
