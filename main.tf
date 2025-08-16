@@ -14,6 +14,7 @@ resource "fakewebservices_server" "servers" {
   vpc  = fakewebservices_vpc.primary_vpc.name
 }
 
+
 resource "fakewebservices_load_balancer" "primary_lb" {
   name    = "Primary Load Balancer"
   servers = fakewebservices_server.servers[*].name
