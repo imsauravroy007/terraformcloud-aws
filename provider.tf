@@ -22,7 +22,7 @@ terraform {
 variable "provider_token" {
   type      = string
   sensitive = true
-  default = "UDyzD4VuFSYLew.atlasv1.G3W2hZWbSoIUyxHRjtZDvRC8Dn1pvBKKamMZkJG6lKTzSvyOmw4agEM6coCpvkrWJic"
+  default = "hmH3K9UrjjqSyw.atlasv1.F3jy0GDRGZK1CQE7y1HxcROMGpJwR2ffg15bcbDBYGePrwrEc3E7w2ly1WuCWFGg0is"
 }
 
 provider "aws" {
